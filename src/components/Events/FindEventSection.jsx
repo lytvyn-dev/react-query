@@ -15,6 +15,7 @@ export default function FindEventSection() {
     // Вона приймає обʼєкт з signal завжди. Навіть якшо ми викликаємо свою функцію без аргументів.
     // Отже signal завжди передається в бʼєкті і тому всі параметри які ми хочемо передати у нашу функцію мусять бути поруч в цьому обʼєкті
     queryFn: ({ signal }) => fetchEvents({ signal, searchTerm }),
+    // Контролюмо коли запит включений
     enabled: searchTerm !== undefined,
   });
 
